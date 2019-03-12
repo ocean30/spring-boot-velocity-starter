@@ -15,11 +15,11 @@ git clone [https://github.com/spring-projects/spring-boot.git](https://github.co
 
 在项目中直接添加如下依赖:
 
-    <dependency>  
-                <groupId>com.dianwoda.velocity</groupId>
-                <artifactId>spring-boot-velocity-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+    <dependency>
+        <groupId>com.ke.ehr.velocity</groupId>
+        <artifactId>spring-boot-velocity-starter</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
     
 
 并添加如下配置:
@@ -35,15 +35,15 @@ git clone [https://github.com/spring-projects/spring-boot.git](https://github.co
 在spring.xml中添加视图解析配置:
 
     <!-- 设置视图解析工具 -->  
-        <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
-            <property name="cache" value="false"/>
-            <property name="layoutUrl" value="layout/layout.vm"/>
-            <property name="prefix" value="/templates/"/>
-            <property name="suffix" value=".vm"/>
-            <property name="exposeSpringMacroHelpers" value="true"/>
-            <property name="contentType" value="text/html;charset=UTF-8"/>
-            <property name="viewClass" value="org.springframework.web.servlet.view.velocity.VelocityLayoutView"/>
-        </bean>
+    <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+        <property name="cache" value="false"/>
+        <property name="layoutUrl" value="layout/layout.vm"/>
+        <property name="prefix" value="/templates/"/>
+        <property name="suffix" value=".vm"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <property name="viewClass" value="org.springframework.web.servlet.view.velocity.VelocityLayoutView"/>
+    </bean>
     
 
 按照上述配置即可在springboot2.x项目中使用velocity模板，欢迎有需要的小伙伴试用，使用过程中有问题可以直接反馈给我
